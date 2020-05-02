@@ -1,0 +1,33 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.current-group-name
+        team A
+      %ul.member-list
+        Member :
+        %li.member-list__first
+          ryuji
+    = link_to "#",class:"main-header__edit-btn" do
+      Edit
+  .chat-main__message-list
+    .messages
+      .message-box
+        .message-box__user-name
+          %p.current__user
+            ryuji
+        .message-box__date
+          %p.post-date
+            2020/04/26(Sun)17:10
+      .message-text
+        %p
+          おはよう！
+  .chat-main__message-form
+    %form.new-message
+      .input-box
+        %input{class:"input-box__text", placeholder:"type a message", type:"text"}
+        %label{class:"input-box__image"}
+          = icon('fas', 'image')
+          %input{type:"file", class: "input-box__image__file"}
+      %input.submit-btn{type:"submit", name:"commit", value:"send"}
+
+
